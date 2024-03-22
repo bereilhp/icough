@@ -32,7 +32,6 @@ def get_embedding(audio_data):
     _, emb = model.inference(query_audio)
     return normalize(emb[0])
 
-# MongoDB insert functions
 def insert_mongo_results(results):
     entry = {"sensor": "Laptop", "data_time": datetime.now(), "results": results}
     mongodb_results_collection.insert_one(entry)
