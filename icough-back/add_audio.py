@@ -13,7 +13,7 @@ connection_string = os.getenv('MONGO_CONNECTION_STRING')
 
 client = MongoClient(connection_string, tlsCAFile=certifi.where())
 
-db = client['audio']
+db = client['iCough']
 mongodb_sounds_collection = db['sounds']
 mongodb_results_collection = db['results']
 

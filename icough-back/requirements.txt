@@ -1,0 +1,9 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+numpy==1.26.2
+pymongo==4.6.1
+certifi==2023.11.17
+python-dotenv==1.0.1
+pydub==0.25.1
+python-multipart==0.0.9
+panns-inference==0.1.1
