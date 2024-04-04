@@ -1,8 +1,11 @@
-up:
+build:
 	docker-compose up --build -d
 
-down:
-	docker-compose down
+start: 
+	docker-compose start
+	
+stop:
+	docker-compose stop
 	
 clean:
 	docker-compose down --rmi all -v
