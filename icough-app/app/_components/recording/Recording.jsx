@@ -50,7 +50,7 @@ export default function Recording() {
       formData.append("file", audioBlob, "audio.webm");
       setErrorMessage(""); // Reset error message on new upload attempt
       try {
-        const response = await fetch("http://localhost:8000/process-audio/", {
+        const response = await fetch("http://localhost:8888/process-audio/", {
           method: "POST",
           body: formData,
         });
