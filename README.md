@@ -3,15 +3,19 @@
 ## Build the Frontend and Backend using Docker Compose
 
 ### Build and run:
-
 ```
-make up
+make build
 ```
 
 ### Stop Containers
-
 ```
 make stop
+```
+
+### Start Containers
+
+```
+make start
 ```
 
 ### Clean Containers, Images, Volumes, etc
