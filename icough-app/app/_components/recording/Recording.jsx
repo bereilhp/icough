@@ -29,7 +29,7 @@ export default function Recording() {
         const audioBlob = new Blob(audioChunksRef.current);
         const audioUrl = URL.createObjectURL(audioBlob);
         setAudioUrl(audioUrl);
-        setAudioBlob(audioBlob); // Save the blob for later use
+        setAudioBlob(audioBlob);
       };
       mediaRecorderRef.current.start();
     } else {
@@ -48,9 +48,13 @@ export default function Recording() {
     if (audioBlob) {
       const formData = new FormData();
       formData.append("file", audioBlob, "audio.webm");
-      setErrorMessage(""); // Reset error message on new upload attempt
+      setErrorMessage("");
+
+      const API_BASE_IP = process.env.NEXT_PUBLIC_IP;
+      const endpoint = `http://${API_BASE_IP}:8888/process-audio/`;
+
       try {
-        const response = await fetch("http://localhost:8888/process-audio/", {
+        const response = await fetch(endpoint, {
           method: "POST",
           body: formData,
         });
