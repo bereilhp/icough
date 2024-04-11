@@ -1,4 +1,4 @@
-# icough
+# iCough
 
 ## Prerequisites
 TBD
