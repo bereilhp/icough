@@ -1,4 +1,4 @@
-# iCough
+# iCough App
 
 ## Prerequisites
 TBD
